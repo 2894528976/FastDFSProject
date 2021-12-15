@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="web" />
+        <module name="test" />
+        <module name="dfs-model" />
+        <module name="dfs-mapper" />
+        <module name="service" />
+        <module name="demod" />
+        <module name="FastDFSProject" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="demod" target="1.8" />
+      <module name="dfs-mapper" target="1.8" />
+      <module name="dfs-model" target="1.8" />
+      <module name="FastDFSProject" target="1.8" />
+      <module name="service" target="9" />
+      <module name="test" target="1.8" />
+      <module name="web" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
