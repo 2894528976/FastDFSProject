@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--   User getPasswordByUserName(String username);-->
+<mapper namespace="sun.dfs.pj.mapper.AddresMapper">
+
+    <insert id="insert">
+INSERT INTO addres(url,annotation,outher,file_type,belong,is_open,create_time,description,thumbnail,uid)
+VALUES(#{url},#{annotation},#{outher},#{fileType},#{belong},#{isOpen},#{createTime},#{description},#{thumbnail},#{uid})
+    </insert>
+    <delete id="deleteById">
+        delete from addres where id = #{id}
+    </delete>
+    <select id="getUrl" resultType="java.lang.String">
+         select url from addres where id = #{id}
+    </select>
+    <select id="selectById" resultType="sun.dfs.pj.model.Addres">
+         select * from addres where id = #{id}
+    </select>
+    <select id="getPublicPage" resultType="sun.dfs.pj.model.Addres">
+        select * from addres where is_open=1
+    </select>
+    <select id="getUserPage" resultType="sun.dfs.pj.model.Addres">
+        select * from addres where belong=#{name}
+    </select>
+</mapper>
